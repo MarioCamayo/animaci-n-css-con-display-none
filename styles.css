@@ -12,16 +12,59 @@ button{
   background-color: #0a1f5c;
   border-radius: 7px;
   color: #fff;
-  font-size: 10px;
-  padding: 7px 16px;
+  font-size: 14px;
+  padding: 8px 24px;
   
 }
 p{
   color: #fff;
+  font-size: 20px;
   
 }
 
 .btn-open{
   background-color: #0a1f5c;
   padding: 7px 18px;
+  margin: 40px;
+}
+
+/* paso 1 al abrirlo */
+/* dialog[open] {
+  scale:1;
+  transition: scale .3s ease-in-out,
+  translate 1s ease;
+  translate:0px 0px;
+
+
+  /* paso 0 al estado inicial */
+  /*@starting-style {
+    scale:0;
+    translate:0px 200px;
+  }
+} */
+
+/* paso 2 al cerrarlo */
+/*dialog {
+  transition: scale .5s  ease,
+  display .3s  ease allow-discrete;
+  scale: 0;
+}*/
+
+dialog {
+  transition: scale .5s  ease,
+  display .3s  ease allow-discrete;
+  scale: 0;
+
+    &[open] {
+    scale:1;
+    transition: scale .3s ease-in-out,
+    translate 1s ease;
+    translate:0px 0px;
+
+    /* paso 0 al estado inicial */
+    @starting-style {
+      scale:0;
+      translate:0px 200px;
+    }
+  }
 }
